@@ -1,0 +1,38 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka
+
+server:
+  port: 8086
+  error:
+    include-binding-errors: always
+    include-message: always
+spring:
+  application:
+    name: shopping
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/shoppingdb
+    username: root
+    password: Password@1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      #      ddl-auto: create-drop
+#      show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+# This is to connect via gateway to other microservices.
+#application:
+#  config:
+#    products-url: http://localhost:8083/products
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
