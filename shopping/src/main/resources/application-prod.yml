@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: shoppingProd
+  config:
+    import: optional:configserver:http://localhost:8081
+

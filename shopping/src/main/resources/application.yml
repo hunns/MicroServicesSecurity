@@ -1,6 +1,3 @@
 spring:
-  application:
-    name: shopping
-  config:
-    import: optional:configserver:http://localhost:8081
-
+  profiles:
+    active: dev
